@@ -1,0 +1,109 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b72cc3ba-aef6-40ad-8b83-5de24fe68012\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/django project.iml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FanSupport/fixtures/auth_users.json\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FanSupport/fixtures/initial_clubs.json\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FanSupport/fixtures/initial_data.json\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FanSupport/forms.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FanSupport/urls.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/templates/FanSupport/Dashboard.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/templates/FanSupport/base.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/templates/FanSupport/create_ticket.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/templates/FanSupport/home.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/templates/FanSupport/register.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/templates/FanSupport/ticket_detail.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/templates/FanSupport/ticket_list.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/templates/profile.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/templates/registration/login.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"QODANA_PROBLEMS_VIEW_TAB\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 6\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2uBlHYFM9RcFxkNralMB3UJjtKY\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n    <option name=\"showMembers\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"Django Server.django project.executor\": \"Debug\",\r\n    \"RunOnceActivity.OpenDjangoStructureViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"RunOnceActivity.pycharm.django.structure.promotion.once.per.project\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"django.template.preview.state\": \"SHOW_EDITOR_AND_PREVIEW\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"QodanaIsSelectedPersistenceService\">\r\n    <option name=\"selectedOrLoading\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\dylan\\OneDrive\\Desktop\\Web framework\\django project\\FanSupport\\fixtures\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"django project\" type=\"Python.DjangoServer\" factoryName=\"Django server\">\r\n      <module name=\"django project\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n        <env name=\"DJANGO_SETTINGS_MODULE\" value=\"django_project.settings\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"launchJavascriptDebuger\" value=\"false\" />\r\n      <option name=\"port\" value=\"8000\" />\r\n      <option name=\"host\" value=\"\" />\r\n      <option name=\"additionalOptions\" value=\"\" />\r\n      <option name=\"browserUrl\" value=\"\" />\r\n      <option name=\"runTestServer\" value=\"false\" />\r\n      <option name=\"runNoReload\" value=\"false\" />\r\n      <option name=\"useCustomRunCommand\" value=\"false\" />\r\n      <option name=\"customRunCommand\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-PY-243.24978.54\" />\r\n        <option value=\"bundled-python-sdk-91e3b7efe1d4-466328ff949b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.24978.54\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"b72cc3ba-aef6-40ad-8b83-5de24fe68012\" name=\"Changes\" comment=\"\" />\r\n      <created>1741729762191</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1741729762191</updated>\r\n      <workItem from=\"1741729763306\" duration=\"13500000\" />\r\n      <workItem from=\"1742646440597\" duration=\"366000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 435f7512ae942dbc0cd73483ec63aa2e526ce00e)
++++ b/.idea/workspace.xml	(date 1742647114319)
+@@ -4,28 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b72cc3ba-aef6-40ad-8b83-5de24fe68012" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/django project.iml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FanSupport/fixtures/auth_users.json" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FanSupport/fixtures/initial_clubs.json" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FanSupport/fixtures/initial_data.json" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FanSupport/forms.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FanSupport/urls.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/templates/FanSupport/Dashboard.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/templates/FanSupport/base.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/templates/FanSupport/create_ticket.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/templates/FanSupport/home.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/templates/FanSupport/register.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/templates/FanSupport/ticket_detail.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/templates/FanSupport/ticket_list.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+-    </list>
++    <list default="true" id="b72cc3ba-aef6-40ad-8b83-5de24fe68012" name="Changes" comment="1st commit" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -35,7 +14,7 @@
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="ProblemsViewState">
+-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
++    <option name="selectedTabId" value="CurrentFile" />
+   </component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 6
+@@ -68,8 +47,22 @@
+     "vue.rearranger.settings.migration": "true"
+   }
+ }]]></component>
++  <component name="QodanaHighlightedReportService">
++    <option name="localRunNotPublishedPersistedInfo">
++      <LocalReportPersistedInfo>
++        <option name="path" value="C:\Users\dylan\AppData\Local\Temp\qodana_output\qodana.sarif.json" />
++        <option name="reportGuid" value="63bec8f5-019b-4643-ad4a-35b8e3c66b1c" />
++        <option name="reportName" value="django project/qodana/2025-03-22" />
++      </LocalReportPersistedInfo>
++    </option>
++  </component>
+   <component name="QodanaIsSelectedPersistenceService">
+     <option name="selectedOrLoading" value="true" />
++  </component>
++  <component name="QodanaReportsService">
++    <option name="descriptions">
++      <ReportDescription localRun="true" path="C:\Users\dylan\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="63bec8f5-019b-4643-ad4a-35b8e3c66b1c" reportId="django project/qodana/2025-03-22" />
++    </option>
+   </component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+@@ -120,8 +113,25 @@
+       <option name="presentableId" value="Default" />
+       <updated>1741729762191</updated>
+       <workItem from="1741729763306" duration="13500000" />
+-      <workItem from="1742646440597" duration="366000" />
++      <workItem from="1742646440597" duration="667000" />
+     </task>
++    <task id="LOCAL-00001" summary="1st commit">
++      <option name="closed" value="true" />
++      <created>1742646969789</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1742646969789</updated>
++    </task>
++    <task id="LOCAL-00002" summary="1st commit">
++      <option name="closed" value="true" />
++      <created>1742647064704</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1742647064704</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -138,4 +148,8 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="1st commit" />
++    <option name="LAST_COMMIT_MESSAGE" value="1st commit" />
++  </component>
+ </project>
+\ No newline at end of file
