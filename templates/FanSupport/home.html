@@ -1,0 +1,55 @@
+{% extends 'FanSupport/base.html' %}
+{% block title %}Home - League of Ireland Fan Support{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-dark text-light py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-7">
+        <h1 class="display-4 fw-bold">Welcome to League of Ireland Fan Support</h1>
+        <p class="lead">Get support for your club or explore your favorite teams!</p>
+        <a href="{% url 'register' %}" class="btn btn-primary btn-lg me-2">Join Now</a>
+        <a href="{% url 'ticket_list' %}" class="btn btn-outline-light btn-lg">My Tickets</a>
+      </div>
+      <div class="col-md-5">
+        <img src="https://via.placeholder.com/500x300" alt="Support Hero" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- League of Ireland Clubs Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4">League of Ireland Clubs</h2>
+    {% if league_of_ireland_clubs %}
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      {% for club in league_of_ireland_clubs %}
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          {% if club.logo %}
+          <img src="{{ club.logo.url }}" class="card-img-top" alt="{{ club.name }} logo">
+          {% else %}
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Club logo">
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{ club.name }}</h5>
+            <p class="card-text"><strong>Stadium:</strong> {{ club.stadium|default:"N/A" }}</p>
+            {% if club.founded %}
+            <p class="card-text"><small class="text-muted">Founded: {{ club.founded|date:"Y" }}</small></p>
+            {% endif %}
+          </div>
+          <div class="card-footer">
+            <a href="{% url 'ticket_list' %}" class="btn btn-sm btn-outline-primary">Get Support</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-muted">No League of Ireland clubs available.</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

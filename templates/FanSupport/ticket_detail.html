@@ -1,0 +1,13 @@
+{% extends 'FanSupport/base.html' %}
+{% block title %}Ticket Detail{% endblock %}
+{% block content %}
+<h1>{{ ticket.subject }}</h1>
+<p><strong>Category:</strong> {{ ticket.category }}</p>
+<p><strong>Status:</strong> {{ ticket.status }}</p>
+<p><strong>Description:</strong></p>
+<p>{{ ticket.description }}</p>
+<p><strong>Submitted on:</strong> {{ ticket.created_at }}</p>
+<a href="{% url 'ticket_list' %}" class="btn btn-secondary">Back to Tickets</a>
+<a href="{% url 'update_ticket_status' ticket.id %}" class="btn btn-warning">Update Ticket Status</a>
+
+{% endblock %}

@@ -1,0 +1,272 @@
+[
+  {
+    "model": "FanSupport.club",
+    "pk": 1,
+    "fields": {
+      "name": "Arsenal",
+      "stadium": "Emirates Stadium",
+      "founded": "1886-10-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 2,
+    "fields": {
+      "name": "Aston Villa",
+      "stadium": "Villa Park",
+      "founded": "1874-11-12",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 3,
+    "fields": {
+      "name": "Bournemouth",
+      "stadium": "Vitality Stadium",
+      "founded": "1899-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 4,
+    "fields": {
+      "name": "Brentford",
+      "stadium": "Griffin Park",
+      "founded": "1889-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 5,
+    "fields": {
+      "name": "Brighton & Hove Albion",
+      "stadium": "Falmer Stadium",
+      "founded": "1901-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 6,
+    "fields": {
+      "name": "Chelsea",
+      "stadium": "Stamford Bridge",
+      "founded": "1905-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 7,
+    "fields": {
+      "name": "Crystal Palace",
+      "stadium": "Selhurst Park",
+      "founded": "1905-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 8,
+    "fields": {
+      "name": "Everton",
+      "stadium": "Goodison Park",
+      "founded": "1878-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 9,
+    "fields": {
+      "name": "Fulham",
+      "stadium": "Craven Cottage",
+      "founded": "1879-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 10,
+    "fields": {
+      "name": "Liverpool",
+      "stadium": "Anfield",
+      "founded": "1892-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 11,
+    "fields": {
+      "name": "Leicester City",
+      "stadium": "King Power Stadium",
+      "founded": "1884-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 12,
+    "fields": {
+      "name": "Manchester City",
+      "stadium": "Etihad Stadium",
+      "founded": "1880-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 13,
+    "fields": {
+      "name": "Manchester United",
+      "stadium": "Old Trafford",
+      "founded": "1878-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 14,
+    "fields": {
+      "name": "Newcastle United",
+      "stadium": "St James' Park",
+      "founded": "1892-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 15,
+    "fields": {
+      "name": "Southampton",
+      "stadium": "St Mary's Stadium",
+      "founded": "1885-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 16,
+    "fields": {
+      "name": "Tottenham Hotspur",
+      "stadium": "Tottenham Hotspur Stadium",
+      "founded": "1882-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 17,
+    "fields": {
+      "name": "West Ham United",
+      "stadium": "London Stadium",
+      "founded": "1895-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 18,
+    "fields": {
+      "name": "Wolverhampton Wanderers",
+      "stadium": "Molineux Stadium",
+      "founded": "1877-01-01",
+      "league": "PL"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 19,
+    "fields": {
+      "name": "Shamrock Rovers",
+      "stadium": "Tallaght Stadium",
+      "founded": "1901-01-01",
+      "league": "LI"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 20,
+    "fields": {
+      "name": "St. Patrick's Athletic",
+      "stadium": "Richmond Park",
+      "founded": "1929-01-01",
+      "league": "LI"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 21,
+    "fields": {
+      "name": "Dundalk",
+      "stadium": "Oriel Park",
+      "founded": "1903-01-01",
+      "league": "LI"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 22,
+    "fields": {
+      "name": "Bohemians",
+      "stadium": "Dalymount Park",
+      "founded": "1890-01-01",
+      "league": "LI"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 23,
+    "fields": {
+      "name": "Sligo Rovers",
+      "stadium": "The Showgrounds",
+      "founded": "1928-01-01",
+      "league": "LI"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 24,
+    "fields": {
+      "name": "Derry City",
+      "stadium": "Brandywell Stadium",
+      "founded": "1928-01-01",
+      "league": "LI"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 25,
+    "fields": {
+      "name": "Cork City",
+      "stadium": "Turners Cross",
+      "founded": "1984-01-01",
+      "league": "LI"
+    }
+  },
+  {
+    "model": "FanSupport.club",
+    "pk": 26,
+    "fields": {
+      "name": "Waterford",
+      "stadium": "Waterford Regional Stadium",
+      "founded": "1930-01-01",
+      "league": "LI"
+    }
+  },
+    {
+    "model": "FanSupport.club",
+    "pk": 27,
+    "fields": {
+      "name": "Drogheada United ",
+      "stadium": "Drogheda Regional Stadium",
+      "founded": "1951-01-01",
+      "league": "LI"
+    }
+  }
+]

@@ -1,0 +1,61 @@
+{% extends 'FanSupport/base.html' %}
+{% block title %}My Tickets{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+  <h1 class="mb-4">My Tickets</h1>
+  
+  <!-- Optional: Filter Form -->
+  <form method="get" class="mb-4">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <label for="category" class="form-label">Category</label>
+        <select name="category" id="category" class="form-select">
+          <option value="">All</option>
+          <option value="ticketing" {% if selected_category == "ticketing" %}selected{% endif %}>Ticketing</option>
+          <option value="merchandise" {% if selected_category == "merchandise" %}selected{% endif %}>Merchandise</option>
+          <option value="general" {% if selected_category == "general" %}selected{% endif %}>General Inquiry</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label for="priority" class="form-label">Priority</label>
+        <select name="priority" id="priority" class="form-select">
+          <option value="">All</option>
+          <option value="Low" {% if selected_priority == "Low" %}selected{% endif %}>Low</option>
+          <option value="Medium" {% if selected_priority == "Medium" %}selected{% endif %}>Medium</option>
+          <option value="High" {% if selected_priority == "High" %}selected{% endif %}>High</option>
+        </select>
+      </div>
+      <div class="col-md-4 d-flex align-items-end">
+        <button type="submit" class="btn btn-primary">Filter</button>
+      </div>
+    </div>
+  </form>
+  
+  <!-- Ticket Cards Grid -->
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for ticket in tickets %}
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">{{ ticket.subject }}</h5>
+          <p class="card-text">
+            <strong>Category:</strong> {{ ticket.get_category_display }}<br>
+            <strong>Priority:</strong> {{ ticket.priority }}<br>
+            <strong>Status:</strong> {{ ticket.status }}<br>
+            <strong>Created On:</strong> {{ ticket.created_at|date:"M d, Y" }}
+          </p>
+        </div>
+        <div class="card-footer text-end">
+          <a href="{% url 'ticket_detail' ticket.id %}" class="btn btn-outline-primary btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <div class="col">
+      <p class="text-muted">No tickets found.</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
