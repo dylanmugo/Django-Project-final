@@ -1,0 +1,102 @@
+[
+    {
+      "model": "FanSupport.club",
+      "pk": 19,
+      "fields": {
+        "name": "Shamrock Rovers",
+        "stadium": "Tallaght Stadium",
+        "founded": "1901-01-01",
+        "league": "LI",
+        "logo": "club_logos/Shamrock-Rovers.png"
+      }
+    },
+    {
+      "model": "FanSupport.club",
+      "pk": 20,
+      "fields": {
+        "name": "St. Patrick's Athletic",
+        "stadium": "Richmond Park",
+        "founded": "1929-01-01",
+        "league": "LI",
+        "logo": "club_logos/St-Patricks-Athletic.png"
+      }
+    },
+    {
+      "model": "FanSupport.club",
+      "pk": 21,
+      "fields": {
+        "name": "Dundalk",
+        "stadium": "Oriel Park",
+        "founded": "1903-01-01",
+        "league": "LI",
+        "logo": "club_logos/Dundalk.png"
+      }
+    },
+    {
+      "model": "FanSupport.club",
+      "pk": 22,
+      "fields": {
+        "name": "Bohemians",
+        "stadium": "Dalymount Park",
+        "founded": "1890-01-01",
+        "league": "LI",
+        "logo": "club_logos/Bohemians.png"
+      }
+    },
+    {
+      "model": "FanSupport.club",
+      "pk": 23,
+      "fields": {
+        "name": "Sligo Rovers",
+        "stadium": "The Showgrounds",
+        "founded": "1928-01-01",
+        "league": "LI",
+        "logo": "club_logos/Sligo-Rovers.png"
+      }
+    },
+    {
+      "model": "FanSupport.club",
+      "pk": 24,
+      "fields": {
+        "name": "Derry City",
+        "stadium": "Brandywell Stadium",
+        "founded": "1928-01-01",
+        "league": "LI",
+        "logo": "club_logos/Derry-City.png"
+      }
+    },
+    {
+      "model": "FanSupport.club",
+      "pk": 25,
+      "fields": {
+        "name": "Cork City",
+        "stadium": "Turners Cross",
+        "founded": "1984-01-01",
+        "league": "LI",
+        "logo": "club_logos/Cork-City.png"
+      }
+    },
+    {
+      "model": "FanSupport.club",
+      "pk": 26,
+      "fields": {
+        "name": "Waterford",
+        "stadium": "Waterford Regional Stadium",
+        "founded": "1930-01-01",
+        "league": "LI",
+        "logo": "club_logos/Waterford.png"
+      }
+    },
+    {
+      "model": "FanSupport.club",
+      "pk": 27,
+      "fields": {
+        "name": "Drogheda United",
+        "stadium": "United Park",
+        "founded": "1919-01-01",
+        "league": "LI",
+        "logo": "club_logos/Drogheda-United-FC.png"
+      }
+    }
+  ]
+  
