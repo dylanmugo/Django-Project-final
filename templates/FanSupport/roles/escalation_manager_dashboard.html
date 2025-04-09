@@ -1,0 +1,19 @@
+{% extends 'FanSupport/base.html' %}
+{% block title %}Escalation Manager Dashboard{% endblock %}
+{% block content %}
+<div class="container my-4">
+  <h1>Escalation Manager Dashboard</h1>
+  {% if escalated_tickets %}
+    <ul class="list-group">
+      {% for ticket in escalated_tickets %}
+        <li class="list-group-item">
+          <a href="{% url 'ticket_detail' ticket.id %}">{{ ticket.subject }}</a>
+          <span class="badge bg-warning">{{ ticket.status }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="text-muted">No escalated tickets.</p>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'FanSupport/base.html' %}
+{% block title %}Support Agent Dashboard{% endblock %}
+
+{% block extra_head %}
+  <!-- Custom CSS for flashy flashcards -->
+  <style>
+    .flashcard {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    .flashcard:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+  <h1 class="mb-4 text-center animate__animated animate__fadeInDown">Support Agent Dashboard</h1>
+  <p class="text-center mb-5">View tickets assigned to you:</p>
+
+  {% if agent_tickets %}
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 animate__animated animate__fadeInUp">
+    {% for ticket in agent_tickets %}
+    <div class="col">
+      <div class="card flashcard h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ ticket.subject }}</h5>
+          <p class="card-text">
+            <strong>Status:</strong>
+            <span class="badge bg-secondary">{{ ticket.status }}</span>
+          </p>
+        </div>
+        <div class="card-footer text-end">
+          <a href="{% url 'ticket_detail' ticket.id %}" class="btn btn-outline-primary btn-sm">
+            View Details <i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="text-muted text-center">No tickets assigned to you.</p>
+  {% endif %}
+</div>
+{% endblock %}

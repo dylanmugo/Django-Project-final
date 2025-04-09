@@ -1,0 +1,20 @@
+{% extends 'FanSupport/base.html' %}
+{% block title %}Billing Specialist Dashboard{% endblock %}
+{% block content %}
+<div class="container my-4">
+  <h1>Billing Specialist Dashboard</h1>
+  <p>Support tickets related to billing and invoicing:</p>
+  {% if billing_tickets %}
+    <ul class="list-group">
+      {% for ticket in billing_tickets %}
+        <li class="list-group-item">
+          <a href="{% url 'ticket_detail' ticket.id %}">{{ ticket.subject }}</a>
+          <span class="badge bg-info">{{ ticket.status }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="text-muted">No billing tickets found.</p>
+  {% endif %}
+</div>
+{% endblock %}

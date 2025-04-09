@@ -4,15 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b72cc3ba-aef6-40ad-8b83-5de24fe68012" name="Changes" comment="" />
+    <list default="true" id="b72cc3ba-aef6-40ad-8b83-5de24fe68012" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/FanSupport/roles/billing_specialist_dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/FanSupport/roles/escalation_manager_dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/FanSupport/roles/support_agent_dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/FanSupport/roles/support_supervisor_dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FanSupport/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FanSupport/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FanSupport/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FanSupport/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/FanSupport/Dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/FanSupport/Dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/FanSupport/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/FanSupport/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/FanSupport/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/FanSupport/home.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dylanmugo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dylanmugo/Django-Project-final.git&quot;,
+    &quot;accountId&quot;: &quot;566e9474-6b3e-44c7-939d-bfc62b9bcfb7&quot;
+  }
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
@@ -39,6 +70,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dylan/OneDrive/Desktop/Django-Project&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -58,6 +90,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dylan\OneDrive\Desktop\Django-Project\templates\FanSupport\roles" />
       <recent name="C:\Users\dylan\OneDrive\Desktop\Web framework\django project\FanSupport\fixtures" />
     </key>
   </component>
@@ -106,6 +139,8 @@
       <updated>1741729762191</updated>
       <workItem from="1741729763306" duration="13500000" />
       <workItem from="1742646440597" duration="366000" />
+      <workItem from="1743975594608" duration="5833000" />
+      <workItem from="1744188942859" duration="8913000" />
     </task>
     <servers />
   </component>
