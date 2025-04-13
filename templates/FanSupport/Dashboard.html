@@ -2,128 +2,121 @@
 {% block title %}Dashboard{% endblock %}
 
 {% block content %}
-<div class="container my-4">
-  <h1 class="mb-4">Dashboard</h1>
+<div class="container my-5">
+  <!-- Dashboard Header -->
+  <div class="text-center mb-5">
+    <h1 class="fw-bold animate__animated animate__fadeInDown">Your Dashboard</h1>
+    <p class="lead text-muted animate__animated animate__fadeInUp">Get insights and manage your support tickets</p>
+    <div class="d-flex justify-content-center gap-3 mt-3">
+      <a href="{% url 'create_ticket' %}" class="btn btn-success btn-lg">Create Ticket</a>
+      <a href="{% url 'resolved_tickets_by_club' %}" class="btn btn-outline-primary btn-lg">View Resolved Tickets</a>
+    </div>
+  </div>
 
-  <!-- Chart Section -->
-  <div class="card mb-4 shadow-sm">
+  <!-- Summary Cards -->
+  <div class="row text-center mb-4">
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm border-left-primary animate__animated animate__fadeInUp">
+        <div class="card-body">
+          <h5 class="card-title">Total Tickets</h5>
+          <p class="display-6">{{ total_tickets }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm border-left-warning animate__animated animate__fadeInUp">
+        <div class="card-body">
+          <h5 class="card-title">Open Tickets</h5>
+          <p class="display-6">{{ open_tickets }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm border-left-success animate__animated animate__fadeInUp">
+        <div class="card-body">
+          <h5 class="card-title">Resolved Tickets</h5>
+          <p class="display-6">{{ resolved_tickets }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticket Status Chart -->
+  <div class="card shadow-sm mb-5 animate__animated animate__fadeIn">
     <div class="card-header bg-primary text-white">
       <strong>Ticket Status Overview</strong>
     </div>
-    <div class="card-body">
+    <div class="card-body text-center">
       <canvas id="statusChart" width="400" height="200"></canvas>
     </div>
   </div>
 
-  <!-- Role-Based Dashboards -->
-  <div class="card my-4 shadow-sm">
-    <div class="card-header bg-warning text-dark">
-      <h5 class="mb-0">Role-Specific Dashboards</h5>
-    </div>
-    <div class="card-body">
-      <div class="row row-cols-1 row-cols-md-2 g-3">
-        {% for group in user.groups.all %}
-          {% if group.name == 'SupportAgent' %}
-            <div class="col">
-              <a href="{% url 'support_agent_dashboard' %}" class="btn btn-outline-primary w-100">Support Agent Dashboard</a>
-            </div>
-          {% elif group.name == 'EscalationManager' %}
-            <div class="col">
-              <a href="{% url 'escalation_dashboard' %}" class="btn btn-outline-danger w-100">Escalation Manager Dashboard</a>
-            </div>
-          {% elif group.name == 'SupportSupervisor' %}
-            <div class="col">
-              <a href="{% url 'supervisor_dashboard' %}" class="btn btn-outline-success w-100">Support Supervisor Dashboard</a>
-            </div>
-          {% elif group.name == 'BillingSpecialist' %}
-            <div class="col">
-              <a href="{% url 'billing_dashboard' %}" class="btn btn-outline-warning w-100">Billing Dashboard</a>
-            </div>
-          {% endif %}
-        {% endfor %}
+  <!-- Ticket Cards -->
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for ticket in user_tickets %}
+    <div class="col">
+      <div class="card h-100 shadow-sm animate__animated animate__fadeInUp">
+        <div class="card-body">
+          <h5 class="card-title">{{ ticket.subject }}</h5>
+          <p class="card-text">
+            <strong>Category:</strong> {{ ticket.get_category_display }}<br>
+            <strong>Priority:</strong> {{ ticket.priority }}<br>
+            <strong>Status:</strong> {{ ticket.status }}<br>
+            <strong>Created:</strong> {{ ticket.created_at|date:"M d, Y" }}
+          </p>
+        </div>
+        <div class="card-footer text-end">
+          <a href="{% url 'ticket_detail' ticket.id %}" class="btn btn-outline-primary btn-sm">View Details</a>
+        </div>
       </div>
     </div>
-  </div>
-
-  <!-- Tickets Table Section -->
-  <div class="card shadow-sm">
-    <div class="card-header bg-light">
-      <strong>Your Tickets</strong>
-    </div>
-    <div class="card-body">
-      {% if user_tickets %}
-      <div class="table-responsive">
-        <table class="table table-striped table-hover">
-          <thead class="thead-dark">
-            <tr>
-              <th>Subject</th>
-              <th>Category</th>
-              <th>Priority</th>
-              <th>Status</th>
-              <th>Created On</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for ticket in user_tickets %}
-            <tr>
-              <td>{{ ticket.subject }}</td>
-              <td>{{ ticket.get_category_display }}</td>
-              <td>{{ ticket.priority }}</td>
-              <td>{{ ticket.status }}</td>
-              <td>{{ ticket.created_at|date:"M d, Y" }}</td>
-              <td>
-                <a href="{% url 'ticket_detail' ticket.id %}" class="btn btn-sm btn-outline-primary">View</a>
-              </td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-      {% else %}
+    {% empty %}
+    <div class="col text-center">
       <p class="text-muted">No tickets found.</p>
-      {% endif %}
     </div>
+    {% endfor %}
   </div>
 </div>
 
-<!-- Include Chart.js from CDN -->
+<!-- Chart.js Script -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
   const statusLabels = {{ status_labels|safe }};
   const statusData = {{ status_data|safe }};
 
   const ctx = document.getElementById('statusChart').getContext('2d');
-  const statusChart = new Chart(ctx, {
-      type: 'pie',
-      data: {
-          labels: statusLabels,
-          datasets: [{
-              label: 'Ticket Status',
-              data: statusData,
-              backgroundColor: [
-                  'rgba(255, 99, 132, 0.7)',
-                  'rgba(54, 162, 235, 0.7)',
-                  'rgba(255, 206, 86, 0.7)',
-              ],
-              borderColor: [
-                  'rgba(255, 99, 132, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-              ],
-              borderWidth: 1
-          }]
-      },
-      options: {
-          responsive: true,
-          plugins: {
-              legend: { position: 'bottom' },
-              title: {
-                  display: true,
-                  text: 'Tickets by Status'
-              }
-          }
+  new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: statusLabels,
+      datasets: [{
+        label: 'Ticket Status',
+        data: statusData,
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.7)',
+          'rgba(54, 162, 235, 0.7)',
+          'rgba(255, 206, 86, 0.7)',
+          'rgba(75, 192, 192, 0.7)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'bottom' },
+        title: {
+          display: true,
+          text: 'Your Tickets by Status'
+        }
       }
+    }
   });
 </script>
 {% endblock %}

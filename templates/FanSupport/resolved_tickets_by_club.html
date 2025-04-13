@@ -1,0 +1,41 @@
+{% extends 'FanSupport/base.html' %}
+{% block title %}Resolved Tickets by Club{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  <h1 class="mb-4">Resolved Tickets by Club</h1>
+
+  {% if tickets_by_club %}
+    {% for club, tickets in tickets_by_club.items %}
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-light">
+          <h5 class="mb-0">
+            {% if club == "Unassigned" %}
+              Unassigned
+            {% else %}
+              {{ club.name }}
+            {% endif %}
+          </h5>
+        </div>
+
+        <ul class="list-group list-group-flush">
+          {% for ticket in tickets %}
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <strong>{{ ticket.subject }}</strong> — {{ ticket.description|truncatewords:12 }}
+                  <br>
+                  <span class="badge bg-success">Resolved</span>
+                  <small class="text-muted">on {{ ticket.resolved_at|date:"M d, Y H:i" }}</small>
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p class="text-muted">No resolved tickets available.</p>
+  {% endif %}
+</div>
+{% endblock %}

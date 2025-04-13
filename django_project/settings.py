@@ -137,8 +137,13 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Redirect after login
 LOGIN_REDIRECT_URL = '/'
+# Redirect to login if unauthenticated user tries accessing protected view
+LOGIN_URL = '/accounts/login/'
+# Redirect after logout
 LOGOUT_REDIRECT_URL = '/accounts/login/'
+
 
 
 MEDIA_URL = '/media/'

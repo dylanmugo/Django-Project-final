@@ -14,16 +14,23 @@
           <th>Created On</th>
         </tr>
       </thead>
-      <tbody>
-        {% for ticket in all_tickets %}
-          <tr>
-            <td><a href="{% url 'ticket_detail' ticket.id %}">{{ ticket.subject }}</a></td>
-            <td>{{ ticket.status }}</td>
-            <td>{{ ticket.assigned_to.username if ticket.assigned_to }}</td>
-            <td>{{ ticket.created_at|date:"M d, Y" }}</td>
-          </tr>
-        {% endfor %}
-      </tbody>
+    <tbody>
+  {% for ticket in all_tickets %}
+    <tr>
+      <td><a href="{% url 'ticket_detail' ticket.id %}">{{ ticket.subject }}</a></td>
+      <td>{{ ticket.status }}</td>
+      <td>
+        {% if ticket.assigned_to %}
+          {{ ticket.assigned_to.username }}
+        {% else %}
+          <span class="text-muted">Unassigned</span>
+        {% endif %}
+      </td>
+      <td>{{ ticket.created_at|date:"M d, Y" }}</td>
+    </tr>
+  {% endfor %}
+</tbody>
+
     </table>
   {% else %}
     <p class="text-muted">No tickets found.</p>

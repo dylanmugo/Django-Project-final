@@ -4,18 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b72cc3ba-aef6-40ad-8b83-5de24fe68012" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/FanSupport/roles/billing_specialist_dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/FanSupport/roles/escalation_manager_dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/FanSupport/roles/support_agent_dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/FanSupport/roles/support_supervisor_dashboard.html" afterDir="false" />
+    <list default="true" id="b72cc3ba-aef6-40ad-8b83-5de24fe68012" name="Changes" comment="Updates">
+      <change afterPath="$PROJECT_DIR$/templates/FanSupport/admin/manage_user_roles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/FanSupport/resolved_tickets_by_club.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/FanSupport/roles/escalation_dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/logged_out.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FanSupport/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/FanSupport/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FanSupport/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FanSupport/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FanSupport/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FanSupport/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/FanSupport/Dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/FanSupport/Dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/FanSupport/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/FanSupport/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/FanSupport/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/FanSupport/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/FanSupport/roles/billing_specialist_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/FanSupport/roles/billing_dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/FanSupport/roles/support_agent_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/FanSupport/roles/agent_dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/FanSupport/roles/support_supervisor_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/FanSupport/roles/supervisor_dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/FanSupport/ticket_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/FanSupport/ticket_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/FanSupport/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +69,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Django Server.django project.executor&quot;: &quot;Debug&quot;,
+    &quot;Django Server.django project.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -79,18 +86,10 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="QodanaHighlightedReportService">
-    <option name="localRunNotPublishedPersistedInfo">
-      <LocalReportPersistedInfo>
-        <option name="path" value="C:\Users\dylan\AppData\Local\Temp\qodana_output\qodana.sarif.json" />
-        <option name="reportGuid" value="63bec8f5-019b-4643-ad4a-35b8e3c66b1c" />
-        <option name="reportName" value="django project/qodana/2025-03-22" />
-      </LocalReportPersistedInfo>
-    </option>
-  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dylan\OneDrive\Desktop\Django-Project\templates\FanSupport\roles" />
+      <recent name="C:\Users\dylan\OneDrive\Desktop\Django-Project\templates\FanSupport" />
       <recent name="C:\Users\dylan\OneDrive\Desktop\Web framework\django project\FanSupport\fixtures" />
     </key>
   </component>
@@ -140,8 +139,19 @@
       <workItem from="1741729763306" duration="13500000" />
       <workItem from="1742646440597" duration="366000" />
       <workItem from="1743975594608" duration="5833000" />
-      <workItem from="1744188942859" duration="8913000" />
+      <workItem from="1744188942859" duration="10131000" />
+      <workItem from="1744547181217" duration="11763000" />
+      <workItem from="1744565652222" duration="3424000" />
     </task>
+    <task id="LOCAL-00001" summary="Updates">
+      <option name="closed" value="true" />
+      <created>1744240140645</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744240140645</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,5 +167,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates" />
   </component>
 </project>

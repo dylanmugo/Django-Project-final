@@ -3,76 +3,78 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="bg-dark text-light py-5">
+<section class="bg-gradient text-white py-5" style="background: linear-gradient(90deg, #FFA500, #FFD580);">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-7">
         <h1 class="display-4 fw-bold">Welcome to League of Ireland Fan Support</h1>
-        <p class="lead">Get support for your club or explore your favorite teams!</p>
-        <a href="{% url 'register' %}" class="btn btn-primary btn-lg me-2">Join Now</a>
-        <a href="{% url 'ticket_list' %}" class="btn btn-outline-light btn-lg">My Tickets</a>
-
-        <!-- Role-Specific Dashboard Links -->
-        {% if request.user.is_authenticated %}
-          {% if request.user.groups.filter(name="SupportAgent").exists %}
-            <div class="mt-3">
-              <a href="{% url 'support_agent_dashboard' %}" class="btn btn-warning btn-sm">Support Agent Dashboard</a>
-            </div>
-          {% endif %}
-          {% if request.user.groups.filter(name="EscalationManager").exists %}
-            <div class="mt-2">
-              <a href="{% url 'escalation_manager_dashboard' %}" class="btn btn-danger btn-sm">Escalation Manager Dashboard</a>
-            </div>
-          {% endif %}
-          {% if request.user.groups.filter(name="SupportSupervisor").exists %}
-            <div class="mt-2">
-              <a href="{% url 'support_supervisor_dashboard' %}" class="btn btn-info btn-sm">Support Supervisor Dashboard</a>
-            </div>
-          {% endif %}
-          {% if request.user.groups.filter(name="BillingSpecialist").exists %}
-            <div class="mt-2">
-              <a href="{% url 'billing_specialist_dashboard' %}" class="btn btn-success btn-sm">Billing Specialist Dashboard</a>
-            </div>
-          {% endif %}
+        <p class="lead">Need help with your favorite club? Submit a ticket or browse updates below!</p>
+        {% if user.is_authenticated %}
+          <a href="{% url 'create_ticket' %}" class="btn btn-light btn-lg me-2">Create Ticket</a>
+          <a href="{% url 'ticket_list' %}" class="btn btn-outline-light btn-lg">My Tickets</a>
+        {% else %}
+          <a href="{% url 'register' %}" class="btn btn-light btn-lg me-2">Join Now</a>
+          <a href="{% url 'login' %}" class="btn btn-outline-light btn-lg">Login</a>
         {% endif %}
       </div>
-      <div class="col-md-5">
-        <img src="https://via.placeholder.com/500x300" alt="Support Hero" class="img-fluid rounded">
+      <div class="col-md-5 text-center">
+        <img src="https://via.placeholder.com/500x300" alt="Support Hero" class="img-fluid rounded shadow-sm">
       </div>
     </div>
   </div>
 </section>
 
+<!-- Role-Specific Dashboard Links -->
+{% if user.is_authenticated %}
+<section class="py-3 bg-white border-bottom text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      {% for group in user.groups.all %}
+        {% if group.name == "SupportAgent" %}
+          <div class="col-auto"><a href="{% url 'support_agent_dashboard' %}" class="btn btn-warning btn-sm mx-1">Support Agent Dashboard</a></div>
+        {% elif group.name == "EscalationManager" %}
+          <div class="col-auto"><a href="{% url 'escalation_manager_dashboard' %}" class="btn btn-danger btn-sm mx-1">Escalation Manager Dashboard</a></div>
+        {% elif group.name == "SupportSupervisor" %}
+          <div class="col-auto"><a href="{% url 'support_supervisor_dashboard' %}" class="btn btn-info btn-sm mx-1">Support Supervisor Dashboard</a></div>
+        {% elif group.name == "BillingSpecialist" %}
+          <div class="col-auto"><a href="{% url 'billing_specialist_dashboard' %}" class="btn btn-success btn-sm mx-1">Billing Specialist Dashboard</a></div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <!-- League of Ireland Clubs Section -->
 <section class="py-5 bg-light">
   <div class="container">
-    <h2 class="mb-4">League of Ireland Clubs</h2>
+    <h2 class="mb-4 text-center">League of Ireland Clubs</h2>
     {% if league_of_ireland_clubs %}
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      {% for club in league_of_ireland_clubs %}
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          {% if club.logo %}
-          <img src="{{ club.logo.url }}" class="card-img-top" alt="{{ club.name }} logo">
-          {% else %}
-          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Club logo">
-          {% endif %}
-          <div class="card-body">
-            <h5 class="card-title">{{ club.name }}</h5>
-            <p class="card-text"><strong>Stadium:</strong> {{ club.stadium|default:"N/A" }}</p>
-            {% if club.founded %}
-            <p class="card-text"><small class="text-muted">Founded: {{ club.founded|date:"Y" }}</small></p>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for club in league_of_ireland_clubs %}
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            {% if club.logo %}
+              <img src="{{ club.logo.url }}" class="card-img-top" alt="{{ club.name }} logo">
+            {% else %}
+              <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Club logo">
             {% endif %}
-          </div>
-          <div class="card-footer">
-            <a href="{% url 'ticket_list' %}" class="btn btn-sm btn-outline-primary">Get Support</a>
+            <div class="card-body">
+              <h5 class="card-title">{{ club.name }}</h5>
+              <p class="card-text"><strong>Stadium:</strong> {{ club.stadium|default:"N/A" }}</p>
+              {% if club.founded %}
+                <p class="card-text"><small class="text-muted">Founded: {{ club.founded|date:"Y" }}</small></p>
+              {% endif %}
+            </div>
+            <div class="card-footer text-center">
+              <a href="{% url 'create_ticket' %}" class="btn btn-outline-primary btn-sm">Get Support</a>
+            </div>
           </div>
         </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
     {% else %}
-    <p class="text-muted">No League of Ireland clubs available.</p>
+      <p class="text-muted text-center">No League of Ireland clubs available.</p>
     {% endif %}
   </div>
 </section>
