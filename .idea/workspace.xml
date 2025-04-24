@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b72cc3ba-aef6-40ad-8b83-5de24fe68012" name="Changes" comment="Updates" />
+    <list default="true" id="b72cc3ba-aef6-40ad-8b83-5de24fe68012" name="Changes" comment="Updates">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FanSupport/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/FanSupport/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/FanSupport/roles/escalation_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/FanSupport/roles/escalation_dashboard.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,7 +128,7 @@
       <workItem from="1744188942859" duration="10131000" />
       <workItem from="1744547181217" duration="11763000" />
       <workItem from="1744565652222" duration="3424000" />
-      <workItem from="1745273720679" duration="8346000" />
+      <workItem from="1745273720679" duration="10959000" />
     </task>
     <task id="LOCAL-00001" summary="Updates">
       <option name="closed" value="true" />
