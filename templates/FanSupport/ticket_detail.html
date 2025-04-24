@@ -1,13 +1,64 @@
 {% extends 'FanSupport/base.html' %}
 {% block title %}Ticket Detail{% endblock %}
-{% block content %}
-<h1>{{ ticket.subject }}</h1>
-<p><strong>Category:</strong> {{ ticket.category }}</p>
-<p><strong>Status:</strong> {{ ticket.status }}</p>
-<p><strong>Description:</strong></p>
-<p>{{ ticket.description }}</p>
-<p><strong>Submitted on:</strong> {{ ticket.created_at }}</p>
-<a href="{% url 'ticket_list' %}" class="btn btn-secondary">Back to Tickets</a>
-<a href="{% url 'update_ticket_status' ticket.id %}" class="btn btn-warning">Update Ticket Status</a>
 
+{% block content %}
+<div class="container mt-4">
+  <h1 class="mb-4">{{ ticket.subject }}</h1>
+
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <p><strong>Category:</strong> {{ ticket.get_category_display }}</p>
+      <p><strong>Priority:</strong> {{ ticket.priority }}</p>
+      <p><strong>Status:</strong>
+        <span class="badge
+          {% if ticket.status == 'Resolved' %}bg-success
+          {% elif ticket.status == 'Escalated' %}bg-warning text-dark
+          {% else %}bg-secondary
+          {% endif %}">
+          {{ ticket.status }}
+        </span>
+      </p>
+      <p><strong>Club:</strong>
+        {% if ticket.club %}
+          {{ ticket.club.name }}
+        {% else %}
+          N/A
+        {% endif %}
+      </p>
+      <p><strong>Description:</strong></p>
+      <p class="border rounded p-3 bg-light">{{ ticket.description }}</p>
+
+      <p class="text-muted">
+        <strong>Submitted:</strong> {{ ticket.created_at|date:"M d, Y H:i" }}
+      </p>
+
+      {% if ticket.resolved_at %}
+        <p class="text-success">
+          <strong>Resolved:</strong> {{ ticket.resolved_at|date:"M d, Y H:i" }}
+        </p>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Ticket Action Buttons -->
+  <div class="mt-4 d-flex gap-2 flex-wrap">
+    <a href="{% url 'ticket_list' %}" class="btn btn-secondary">Back to My Tickets</a>
+
+    {% if ticket.status != 'Resolved' %}
+    <form action="{% url 'update_ticket_status' ticket.id %}" method="post">
+      {% csrf_token %}
+      <input type="hidden" name="status" value="Resolved">
+      <button type="submit" class="btn btn-success">Mark as Resolved</button>
+    </form>
+    {% endif %}
+
+    {% if ticket.status != 'Escalated' %}
+    <form action="{% url 'update_ticket_status' ticket.id %}" method="post">
+      {% csrf_token %}
+      <input type="hidden" name="status" value="Escalated">
+      <button type="submit" class="btn btn-warning">Escalate Ticket</button>
+    </form>
+    {% endif %}
+  </div>
+</div>
 {% endblock %}
